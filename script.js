@@ -1,7 +1,7 @@
 let voices = [];
 speechSynthesis.addEventListener('voiceschanged', function () {
   voices = speechSynthesis.getVoices();
-  console.log(voices);
+  // window.alert(voices);
 })
 
 // Raccolgo dalla pagina gli elementi che mi servono
@@ -46,7 +46,7 @@ function talk() {
     }
   });
 
-  // utterance.voice = femaleVoice;
+  utterance.voice = femaleVoice;
 
   // facciamo parlare la paperella
   speechSynthesis.speak(utterance);
