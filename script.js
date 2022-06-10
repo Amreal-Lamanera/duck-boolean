@@ -1,11 +1,11 @@
-let voices = [];
-speechSynthesis.addEventListener('voiceschanged', function () {
-  voices = speechSynthesis.getVoices();
-  for (let i = 0; i < voices.length; i++) {
-    const element = voices[i];
-    console.log(element.name);
-  }
-})
+// let voices = [];
+// speechSynthesis.addEventListener('voiceschanged', function () {
+//   voices = speechSynthesis.getVoices();
+//   for (let i = 0; i < voices.length; i++) {
+//     const element = voices[i];
+//     console.log(element.name);
+//   }
+// })
 
 // Raccolgo dalla pagina gli elementi che mi servono
 const textArea = document.querySelector('textarea');
@@ -43,13 +43,13 @@ function talk() {
   utterance.rate = 1;
   utterance.pitch = pitch;
 
-  const femaleVoice = voices.find(function (voice) {
-    if (voice.name.includes('Elsa') || voice.name.includes('Federica')) {
-      return true;
-    } else {window.alert("NOME MANCANTE");}
-  });
+  // const femaleVoice = voices.find(function (voice) {
+  //   if (voice.name.includes('Elsa') || voice.name.includes('Federica')) {
+  //     return true;
+  //   } else {window.alert("NOME MANCANTE");}
+  // });
 
-  utterance.voice = femaleVoice;
+  // utterance.voice = femaleVoice;
 
   // facciamo parlare la paperella
   speechSynthesis.speak(utterance);
