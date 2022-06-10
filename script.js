@@ -1,8 +1,8 @@
-// let voices = [];
-// speechSynthesis.addEventListener('voiceschanged', function () {
-//   voices = speechSynthesis.getVoices();
-//   console.log(voices);
-// })
+let voices = [];
+speechSynthesis.addEventListener('voiceschanged', function () {
+  voices = speechSynthesis.getVoices();
+  console.log(voices);
+})
 
 // Raccolgo dalla pagina gli elementi che mi servono
 const textArea = document.querySelector('textarea');
@@ -40,11 +40,11 @@ function talk() {
   utterance.rate = 1;
   utterance.pitch = pitch;
 
-  // const femaleVoice = voices.find(function (voice) {
-  //   if (voice.name.includes('Elsa')) {
-  //     return true;
-  //   }
-  // });
+  const femaleVoice = voices.find(function (voice) {
+    if (voice.name.includes('Elsa') || voice.name.includes('Elsa')) {
+      return true;
+    }
+  });
 
   // utterance.voice = femaleVoice;
 
