@@ -3,7 +3,7 @@ speechSynthesis.addEventListener('voiceschanged', function () {
   voices = speechSynthesis.getVoices();
   for (let i = 0; i < voices.length; i++) {
     const element = voices[i];
-    window.alert(element.name);
+    console.log(element.name);
   }
 })
 
@@ -46,7 +46,7 @@ function talk() {
   const femaleVoice = voices.find(function (voice) {
     if (voice.name.includes('Elsa') || voice.name.includes('Federica')) {
       return true;
-    }
+    } else {window.alert("NOME MANCANTE");}
   });
 
   utterance.voice = femaleVoice;
