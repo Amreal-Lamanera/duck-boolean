@@ -1,7 +1,10 @@
 let voices = [];
 speechSynthesis.addEventListener('voiceschanged', function () {
   voices = speechSynthesis.getVoices();
-  // window.alert(voices);
+  for (let i = 0; i < voices.length; i++) {
+    const element = voices[i];
+    window.alert(element.name);
+  }
 })
 
 // Raccolgo dalla pagina gli elementi che mi servono
